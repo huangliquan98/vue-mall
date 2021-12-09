@@ -17,7 +17,7 @@ VueRouter.prototype.push = function push (to) {
     return VueRouterPush.call(this, to).catch(err => err)
 }
 
-//replace
+//replace避免重复点击报错的
 const VueRouterReplace = VueRouter.prototype.replace
 VueRouter.prototype.replace = function replace (to) {
   return VueRouterReplace.call(this, to).catch(err => err)
